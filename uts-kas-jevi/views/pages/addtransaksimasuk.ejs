@@ -1,0 +1,61 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i> Tambah
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <form action="" method="POST">
+            <div class="form-grup">
+                <label class="font-weight-bold for="">No Bukti</label>
+                <input type="text" name="akun" class="form-control" required>
+            </div>
+        </form>
+        <form action="" method="POST">
+            <div class="form-grup">
+                <label class="font-weight-bold for="">Tanggal</label>
+                <div class="input-group date" id="datepicker">
+                    <input type="text" class="form-control">
+                    <span class="input-group-append">
+                    <span class="input-group-text bg-white">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                    </span>
+                </div>
+            </div>
+        </form>
+        <form action="" method="POST">
+            <label class="font-weight-bold for="">Untuk Keperluan</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Pilih Nama Akun</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </form>
+        <form action="" method="POST">
+            <div class="form-grup">
+                <label class="font-weight-bold for="">Diterima Dari</label>
+                <input type="text" name="akun" class="form-control" required>
+            </div>
+        </form>
+        <form action="" method="POST">
+            <div class="form-grup">
+                <label class="font-weight-bold for="">Uang Sejumlah</label>
+                <input type="text" name="akun" class="form-control" required>
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>

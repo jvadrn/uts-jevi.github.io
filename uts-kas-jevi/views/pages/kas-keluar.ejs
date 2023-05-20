@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+    <nav>
+        <%- include('../partials/navbar'); %>
+    </nav>
+
+<main>
+    <div class="container mt-3">
+        <h1>Transaksi</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Transaksi</li>
+            <li class="breadcrumb-item active" aria-current="page">Transaksi Keluar</li>
+          </ol>
+        </nav>
+          <div class="row">
+            <div class="col-md-12">
+              <%- include('addtransaksikeluar.ejs')%>
+            </div>
+          </div>
+            <table class="table mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Tanggal</th>
+                    <th scope="col">No Bukti</th>
+                    <th scope="col">Untuk Keperluan</th>
+                    <th scope="col">Dikeluarkan Untuk</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="btn btn-dark badge round-pill"><i class="bi bi-pencil-square"></i></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="btn btn-dark badge round-pill"><i class="bi bi-pencil-square"></i></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    <td>
+
+                    </td>
+                    <td></td>
+                    <td><a href="" class="btn btn-dark badge round-pill"><i class="bi bi-pencil-square"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+       
+    </div>
+   
+</main>
+
+
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+    <nav>
+        <%- include('../partials/navbar'); %>
+    </nav>
+
+<main>
+    <div class="container mt-3">
+        <h1>Daftar Akun</h1>
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Daftar akun</li>
+            </ol>
+            <div>
+                <%- include('addAkun.ejs')%>
+            </div>
+            <table class="table mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">No Akun</th>
+                    <th scope="col">Nama Akun</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>
+                        <a href="" class="btn btn-dark badge round-pill"><i class="bi bi-pencil-square"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+   
+</main>
+
+
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+    <nav>
+        <%- include('../partials/navbar'); %>
+    </nav>
+
+<main>
+    <div class="container mt-3">
+        <h1>Transaksi</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Transaksi</li>
+            <li class="breadcrumb-item active" aria-current="page">Transaksi Masuk</li>
+          </ol>
+        </nav>
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-12">
+              <%- include('addtransaksimasuk.ejs')%>
+            </div>
+          </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-3">
+                <table class="table align-items-center mb-0 table-striped" id="table">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Tanggal</th>
+                      <th>No Bukti</th>
+                      <th>Diterima Dari</th>
+                      <th>Untuk Keperluan</th>
+                      <th>Jumlah</th>
+                    </tr>
+                  </thead>
+                  <!-- ... -->
+                  <tbody>
+                    {{#each results}}
+                    <tr>
+                      <td>{{inc @index}}</td>
+                      <td>{{formatDate tgl}}</td>
+                      <td>{{no_bukti}}</td>
+                      <td>{{tujuan}}</td>
+                      <td>{{no_akun}} - {{nm_akun}}</td>
+                      <td>{{formatRupiah kas_masuk}}</td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editakun" data-no_bukti="{{no_bukti}}" data-tgl="{{tgl}}" data-no_akun="{{no_akun}}" data-tujuan="{{tujuan}}" data-jumlah="{{jumlah}}">Edit</button>
+                        <form action="/deleteKasmasuk" method="post" style="display:inline-block;">
+                          <input type="hidden" name="no_bukti" value="{{no_bukti}}">
+                          <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</button>
+                        </form>
+                      </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                  <!-- ... -->
+                </table>
+              </div>
+            </div>
+        </div>
+       
+    </div>
+   
+</main>
+
+
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>
